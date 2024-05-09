@@ -20,6 +20,8 @@ requests, re, csv
 Required packages to install for NLTE MPIA (nlte_mpia.py):
 requests, re, csv, selenium
 
+They can be installed using pip.
+
 Download the Python files.
 
 Usage for nlte_inspect.py
@@ -28,7 +30,7 @@ Input file:
 
 Output file: 
 
-O I, Na I, Fe 
+Supported elements: O I, Na I, Fe 
 
 Change the input and output file names, and run!
 
@@ -38,6 +40,6 @@ Input file:
 
 Output file: 
 
-Mg I, Si I, Fe II 
+Supported elements: Mg I, Si I, Fe II 
 
 Change the input and output file names, and run!
