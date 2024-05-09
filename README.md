@@ -30,7 +30,7 @@ Input file:
 
 Output file: 
 
-Supported elements: O I, Na I, Fe 
+Supported elements: O I, Na I, Fe I
 
 Change the input and output file names, and run!
 
@@ -43,3 +43,21 @@ Output file:
 Supported elements: Mg I, Si I, Fe II 
 
 Change the input and output file names, and run!
+
+Citation
+-----
+If the code was helpful, please cite:
+
+Mittal and Roederer (2024), in prep
+
+For INSPECT-STARS:
+
+- O I:
+- Na I:
+- Fe I:
+
+For NLTE MPIA:
+
+- Mg I:
+- Si I:
+- Fe II:
