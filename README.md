@@ -4,10 +4,10 @@ We provide codes to calculate NLTE corrections from two websites: INSPECT-STARS 
 
 The code currently supports NLTE corrections for the following elements: 
 
-* LI I, O I, Na I, Fe I, Sr I (INSPECT-STARS)
+* Li I, O I, Na I, Fe I, Sr I (INSPECT-STARS)
 * Mg I, Si I, Fe II (NLTE MPIA)
 
-Authors
+Authors and Contributors
 -------
  - Sanil Mittal (University of Michigan)
  - Ian U. Roederer (North Carolina State University)
@@ -20,9 +20,11 @@ requests, re, csv
 Required packages to install for NLTE MPIA (nlte_mpia.py):
 re, csv, selenium
 
-They can be installed using pip.
+These packages can be installed using pip.
 
-Download the Python files.
+Download the Python files either directly or using the green Code button on the top right then "Download ZIP". Unzip the file in your folder of choice.
+
+Run the file in your favorite Python compiler after changing the input file names.
 
 Usage for nlte_inspect.py
 -----
@@ -90,15 +92,15 @@ Change the input and output file names, and run!
 
 Citation
 -----
-If the code was helpful, please cite:
-
-Mittal and Roederer (2024), in prep
+If you use this code in your work, please cite Mittal and Roederer (2024), in prep, this GitHub repository (as a footnote), and the relevant articles listed below.
 
 For INSPECT-STARS:
 
-- O I:
+- Li I:
+-  O I:
 - Na I:
 - Fe I:
+- Sr I:
 
 For NLTE MPIA:
 
