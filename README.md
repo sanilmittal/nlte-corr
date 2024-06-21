@@ -4,7 +4,7 @@ We provide codes to calculate NLTE corrections from two websites: INSPECT-STARS 
 
 The code currently supports NLTE corrections for the following elements: 
 
-* O I, Na I, Fe I (INSPECT-STARS)
+* LI I, O I, Na I, Fe I, Sr I (INSPECT-STARS)
 * Mg I, Si I, Fe II (NLTE MPIA)
 
 Authors
