@@ -7,7 +7,7 @@ The code takes in values for the field parameters one-by-one from a file and the
 by parsing the result for the second_last value if it is between -1 and 1. If there are changes made to the limits, wavelengths we can run for, or the format of output 
 on the website, the code will have to be updated.
 
-The elements done: Fe I (26), Na (11), O (8) [RUN SEPARATELY]
+The elements done: Fe I (26), Na (11), O (8), Li (3), Sr (38) [RUN SEPARATELY]
 
 Make sure the required libraries [requests, re, csv] are installed, otherwise first use pip on command line to install them 
 
@@ -17,7 +17,7 @@ Last updated: July 21, 2023 (sanilm@umich.edu)
 """
 
 # initial values to be updated to run the code
-element = "Na"   # Fe, O or Na, for other elements, will have to add html_snippet for their wav values using source code and their limits
+element = "Na"   # Fe, O, Li, Sr or Na, for other elements, will have to add html_snippet for their wav values using source code and their limits
 
 # Corr is the Delta value, Corrected is delta value + abundance value
 output_file = "nlte_fe1ona.csv"  # output with these headers: ["Name", "ID", "Wav", "EqW", "Abundance", "Corr", "Corrected"] # ID must be number, for eg 26 for Fe I
@@ -91,7 +91,26 @@ def process_input_values(element, equivalent_width, temperature, metallicity, lo
             'x': microturbulence,
             'wi': wavelength_index
         }
-
+    elif element == "Li":
+        params = {
+            'element_name': 'Li',
+            'e': equivalent_width,
+            't': temperature,
+            'g': log_gravity,
+            'f': metallicity,
+            'x': microturbulence,
+            'wi': wavelength_index
+        }
+    elif element == "Sr":
+        params = {
+            'element_name': 'Sr',
+            'e': equivalent_width,
+            't': temperature,
+            'g': log_gravity,
+            'f': metallicity,
+            'x': microturbulence,
+            'wi': wavelength_index
+        }
     # Send a GET request with the parameters
     response = requests.get(url, params=params)
 
@@ -287,6 +306,41 @@ elif element == "O":
 <option value="3">7771.957</option>
 <option value="4">7774.156</option>
 <option value="5">7775.356</option>
+"""
+elif element == "Li":
+    id_num = "3"
+    vt_min = 1.0
+    vt_max = 5.0
+    logg_min = 1.0
+    logg_max = 5.0
+    k_min = 4000.0
+    k_max = 8000.0
+    ew_min = 1.0
+    ew_max = 5000.0
+    feh_min = -5.0
+    feh_max = 0.5
+    html_snippet = """
+<option value="0">6103.600</option>
+<option value="1">6707.810</option>
+"""
+elif element == "Sr":
+    id_num = "38"
+    vt_min = 1.0
+    vt_max = 1.0
+    logg_min = 2.2
+    logg_max = 4.6
+    k_min = 4400.0
+    k_max = 6400.0
+    ew_min = 1.0
+    ew_max = 5000.0
+    feh_min = -3.9
+    feh_max = 0.0
+    html_snippet = """
+<option value="0">4077.710</option>
+<option value="1">4215.520</option>
+<option value="2">10036.660</option>
+<option value="3">10327.310</option>
+<option value="4">10914.880</option>
 """
 num = None
 corr = []
